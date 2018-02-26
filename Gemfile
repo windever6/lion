@@ -11,6 +11,7 @@ gem 'redis', '~> 3.3'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'simple_form' # 表单
+gem "responders"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
