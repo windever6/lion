@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
   	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title><%= content_for?(:title) ? yield(:title) : Setting.app_name %></title>
@@ -9,15 +8,8 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'login', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class=<%= current_theme %> >
-    <%= render 'shared/top_nav' %>
-    <%= render 'shared/left_nav' %> 
-    <section class="content">
-      <%= yield %>
-    </section>
-    <!-- <div id="modal-holder"></div> -->
-  </body>
+  <%= yield %>
 </html>

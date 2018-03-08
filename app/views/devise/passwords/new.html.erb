@@ -1,0 +1,47 @@
+<% title_tag t("common.forgot_password") %>
+
+<body class="fp-page">
+  <div class="fp-box">
+  <div class="logo">
+    <h2 align="center"><%= Setting.app_name %></h2>
+    <small><%= Setting.app_slogan %></small>
+  </div>
+  <div class="card">
+    <div class="body">
+      <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <div class="msg"><%= t("common.forgot_password") %></div>
+        <div class="msg"><%= t("common.forgot_password_instruction") %></div>
+
+        
+        <div class="input-group">
+          <span class="input-group-addon"><i class="material-icons">email</i></span>
+          <div class="form-line">
+            <%= f.input_field :email, placeholder: t("common.email"), autofocus: true %>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <span class="input-group-addon"><i class="material-icons">accessibility</i></span>
+          <div class="form-line">
+            <%= rucaptcha_input_tag(class: 'form-control', placeholder: t("common.captcha")) %>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <span class="input-group-addon input-group-captcha"><a class="rucaptcha-image-box" href="#"><%= rucaptcha_image_tag %></a></span>
+        </div>
+
+        <%= f.submit t("common.submit"), class: "btn btn-block btn-lg bg-pink waves-effect" %>
+      <% end %>
+
+      <div class="row m-t-15 m-b--20">
+        <div class="col-xs-6">
+          <%= link_to t("common.register"), new_user_registration_path, "data-turbolinks": false %>
+        </div>
+        <div class="col-xs-6 align-right">
+          <%= link_to t("common.login"), new_user_session_path, "data-turbolinks": false %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

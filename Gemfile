@@ -12,6 +12,15 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'simple_form' # 表单
 gem "responders"
+gem 'devise'
+gem 'rails-settings-cached' # Setting
+gem 'doorkeeper'
+gem "rucaptcha" # 验证码
+gem 'material_icons'
+
+# 三方平台 OAuth 验证登陆
+gem 'omniauth'
+gem 'omniauth-github'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

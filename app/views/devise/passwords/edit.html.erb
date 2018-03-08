@@ -1,0 +1,41 @@
+<% content_for :title do %>-重置密码<% end %>
+
+<body class="signup-page">
+  <div class="signup-box">
+    <div class="logo">
+      <h2 align="center"><%= Setting.app_name %></h2>
+      <small><%= Setting.app_slogan %></small>
+    </div>
+
+    <div class="card">
+      <div class="body">
+        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+          <div class="msg">重置密码</div>
+          <%= f.input :reset_password_token, as: :hidden %>
+          <%# f.full_error :reset_password_token %>
+
+          <div class="input-group">
+            <span class="input-group-addon"><i class="material-icons">lock</i></span>
+            <div class="form-line">
+              <%= f.input_field :password, type: :password, placeholder: '新密码', required: true, autofocus: true %>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <span class="input-group-addon"><i class="material-icons">lock</i></span>
+            <div class="form-line">
+              <%= f.input_field :password_confirmation, type: :password, placeholder: '确认新密码', required: true %>
+            </div>
+          </div>
+
+          <%= f.submit "重置密码", class: "btn btn-block btn-lg bg-pink waves-effect", :disable_with => '重置中...'%>
+        <% end %>
+
+        <div class="m-t-25 m-b--5 align-center">
+          <%= link_to '登录', user_session_path, "data-turbolinks": false %>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+

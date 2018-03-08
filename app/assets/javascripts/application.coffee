@@ -1,0 +1,10 @@
+#= require jquery
+#= require jquery_ujs
+#= require rails-ujs
+#= require turbolinks
+#= require plugins/jquery-slimscroll
+#= require admin
+#= require cable
+#= require demo
+#= require bootstrap
+#= require bootstrap-sprockets

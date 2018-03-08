@@ -1,0 +1,52 @@
+<% title_tag t("common.login") %>
+
+<body class="login-page">
+  <div class="login-box">
+  <div class="logo">
+    <h2 align="center"><%= Setting.app_name %></h2>
+    <small><%= Setting.app_slogan %></small>
+  </div>
+  <div class="card">
+    <div class="body">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name))do |f| %>
+        <div class="msg"><%= t("common.login") %></div>
+
+        <div class="input-group">
+          <span class="input-group-addon"><i class="material-icons">email</i></span>
+          <div class="form-line">
+            <%= f.input_field :email, placeholder: t("common.email"), autofocus: true %>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <span class="input-group-addon"><i class="material-icons">lock</i></span>
+          <div class="form-line">
+            <%= f.input_field :password, type: :password, placeholder: t("common.password") %>
+          </div>
+        </div>
+
+        <div class="row">
+          <% if devise_mapping.rememberable? %>
+            <div class="col-xs-8 p-t-5">
+              <%= f.check_box :remember_me, class: "filled-in chk-col-pink" %>
+              <label for="user_remember_me"><%= t("common.remember_me") %></label>
+            </div>
+          <% end %>
+          
+          <div class="col-xs-4">
+            <%= f.submit t("common.login"), class: "btn btn-block bg-pink waves-effect", disable_with: t("common.logining") %>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="row m-t-15 m-b--20">
+        <div class="col-xs-6">
+          <%= link_to t("common.register"), new_user_registration_path, "data-turbolinks": false %>
+        </div>
+        <div class="col-xs-6 align-right">
+          <%= link_to t("common.forgot_password"), new_user_password_path, "data-turbolinks": false %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
