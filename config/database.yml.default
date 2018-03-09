@@ -16,6 +16,6 @@ test:
 
 production:
   <<: *default
-  database: lion_production
-  username: lion
+  database: lion
+  username: <%= ENV['LION_DATABASE_USERNAME'] %>
   password: <%= ENV['LION_DATABASE_PASSWORD'] %>
