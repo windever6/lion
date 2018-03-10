@@ -17,6 +17,7 @@ gem 'rails-settings-cached' # Setting
 gem 'doorkeeper'
 gem "rucaptcha" # 验证码
 gem 'material_icons'
+gem 'therubyracer'
 
 # 三方平台 OAuth 验证登陆
 gem 'omniauth'

@@ -19,4 +19,5 @@
 .byebug_history
 config/config.yml
 config/database.yml
-shared/
+.rbenv-vars
+/public/assets
