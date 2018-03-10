@@ -1,8 +1,6 @@
 defaults: &defaults
 	app_name: 莫云
-	domain: localhost:3000
 	app_slogan: 我自己的云
-	mailer_sender: fengwenjun19880701@163.com
 	theme_colors: 
 		red: Red
 		pink: Pink
