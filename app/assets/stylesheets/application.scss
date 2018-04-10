@@ -1,10 +1,14 @@
 /*
- *= require_self
- *= require style
- *= require all_themes
+ *= require bootstrap/css/bootstrap.min
+ *= require node-waves/waves.min
+ *= require animate-css/animate.min
+ *= require jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css
+ #= require bootstrap-tagsinput/bootstrap-tagsinput
+ *= require morrisjs/morris
  *= require materialize
+ *= require style
+ *= require all-themes.min
  *= require material_icons
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import "font-awesome";

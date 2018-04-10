@@ -1,12 +1,24 @@
+<!-- Search Bar -->
+<div class="search-bar">
+    <div class="search-icon">
+        <i class="material-icons">search</i>
+    </div>
+    <input type="text" placeholder="请输入关键词...">
+    <div class="close-search">
+        <i class="material-icons">close</i>
+    </div>
+</div>
+<!-- #END# Search Bar -->
 <nav class="navbar">
   <div class="container-fluid">
     <div class="navbar-header">
       <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
       <a href="javascript:void(0);" class="bars"></a>
-      <a class="navbar-brand" href="index.html"><%= Setting.app_name %> - <%= Setting.app_slogan %></a>
+      <a class="navbar-brand" href="javascript:void(0);"><%= Setting.app_name %> - <%= Setting.app_slogan %></a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
         <li>
           <%= link_to destroy_user_session_path, method: :delete do %>
             <%= material_icon.power_settings_new %>

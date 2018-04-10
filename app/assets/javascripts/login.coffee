@@ -1,6 +1,10 @@
 #= require jquery
-#= require jquery_ujs
+#= require rails-ujs
 #= require turbolinks
-#= require admin_login
 #= require bootstrap
+#= require node-waves/waves.min
+#= require jquery-validation/jquery.validate
+#= require admin
+#= require sign-in
+#= require sign-up
 #= require captcha

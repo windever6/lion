@@ -13,10 +13,10 @@
 
   <body class=<%= current_theme %> >
     <%= render 'shared/top_nav' %>
-    <%= render 'shared/left_nav' %> 
+    <%= render 'shared/left_nav' %>
     <section class="content">
       <%= yield %>
+      <%= render 'shared/modal' %>
     </section>
-    <!-- <div id="modal-holder"></div> -->
   </body>
 </html>

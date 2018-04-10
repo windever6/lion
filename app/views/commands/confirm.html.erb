@@ -1,0 +1,8 @@
+<%= simple_form_for(@command, remote: true, html: {id: "form_validation"}) do |f| %>
+  <%= f.input :content, label: '指令内容', disabled: true, wrapper: :form_float_required %>
+  <%= f.input :use_for, label: '指令用途', disabled: true, wrapper: :form_float_required %>
+  <label for="command_labels">指令标签</label>
+  <%= f.input :labels, disabled: true, wrapper: :vertical_tag %>
+<% end %>
+<button type="button" class="btn btn-block btn-lg waves-effect" data-dismiss="modal">不，点错了</button>
+<%= link_to '确定，删除', command_path(@command), method: 'DELETE', remote: true, class: "btn btn-block btn-lg btn-warning waves-effect" %>

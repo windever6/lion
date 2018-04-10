@@ -1,0 +1,8 @@
+<% command ||= @command %>
+<tr>
+  <td><%= command.content %><button class="clipboard-btn" type="button" data-clipboard-text="<%= command.content %>"><%= image_tag("clippy.svg", size: '16x18', alt: "copy") %></button></td>
+  <td><%= command.use_for %></td>
+  <td><%= command.labels %></td>
+  <td><button type="button" class="no_style_btn" data-toggle="modal" data-target="#defaultModal" data-text='编辑指令' data-href=<%= edit_command_path(command) %> data-method='GET' ><%= material_icon.mode_edit %></button></td>
+  <td><button type="button" class="no_style_btn" data-toggle="modal" data-target="#defaultModal" data-text='指令删除后无法恢复，确定删除吗？' data-href=<%= confirm_command_path(command) %> data-method='GET' ><%= material_icon.delete %></button></td>
+</tr>

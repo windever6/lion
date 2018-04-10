@@ -34,16 +34,16 @@ class ApplicationController < ActionController::Base
     session[:return_to] = nil
   end
 
-  def current_user
-    if doorkeeper_token
-      return @current_user if defined? @current_user
-      @current_user ||= User.find_by_id(doorkeeper_token.resource_owner_id)
-      sign_in @current_user
-      @current_user
-    else
-      super
-    end
-  end
+  # def current_user
+  #   if doorkeeper_token
+  #     return @current_user if defined? @current_user
+  #     @current_user ||= User.find_by_id(doorkeeper_token.resource_owner_id)
+  #     sign_in @current_user
+  #     @current_user
+  #   else
+  #     super
+  #   end
+  # end
 
   protected
 end

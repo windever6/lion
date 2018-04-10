@@ -1,0 +1,8 @@
+$("#defaultModal").modal("hide");
+<% if @command.errors.empty? %>
+  notify('指令创建成功');
+  datatableCreate(removeTags('<%= j render('show') %>'))
+<% else %>
+  var text = '指令创建失败: ' + '<%= @command.first_error_message %>'
+  notify(text);
+<% end %>

@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="card">
+        <div class="header">
+          <h2>
+            <%= t("menu.cmd") %>
+            <button type="button" class="btn btn-primary waves-effect pull-right" data-toggle="modal" data-target="#defaultModal" data-text='新增指令' data-href=<%= new_command_path %> data-method='GET' >新增指令</button>
+          </h2>
+        </div>
+        <div class="body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover js-table dataTable">
+              <thead>
+                <tr>
+                    <th>指令内容</th>
+                    <th>指令用途</th>
+                    <th>指令标签</th>
+                    <th>编辑</th>
+                    <th>删除</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                    <th>指令内容</th>
+                    <th>指令用途</th>
+                    <th>指令标签</th>
+                    <th>编辑</th>
+                    <th>删除</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <% @commands.each do |command| %>
+                  <tr>
+                    <td><%= command.content %><button class="clipboard-btn" type="button" data-clipboard-text="<%= command.content %>"><%= image_tag("clippy.svg", size: '16x18', alt: "copy") %></button></td>
+                    <td><%= command.use_for %></td>
+                    <td><%= command.labels %></td>
+                    <td><button type="button" class="no_style_btn" data-toggle="modal" data-target="#defaultModal" data-text='编辑指令' data-href=<%= edit_command_path(command) %> data-method='GET' ><%= material_icon.mode_edit %></button></td>
+                    <td><button type="button" class="no_style_btn" data-toggle="modal" data-target="#defaultModal" data-text='指令删除后无法恢复，确定删除吗？' data-href=<%= confirm_command_path(command) %> data-method='GET' ><%= material_icon.delete %></button></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

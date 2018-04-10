@@ -87,7 +87,8 @@
     upload_and_insert_code: "上传并插入代码"
     uploading: "正在上传"
   menu:
-    home: "首页"
+    home: "主页"
+    cmd: 指令集
     topics: "社区"
     wiki: "Wiki"
     gems: "Gems"
