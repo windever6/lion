@@ -1,5 +1,4 @@
 /*
- *= require bootstrap.min
  *= require node-waves/waves.min
  *= require animate-css/animate.min
  *= require jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css
@@ -10,4 +9,7 @@
  *= require all-themes.min
  *= require material_icons
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "font-awesome";

@@ -69,7 +69,8 @@
   transform: scale(1); }
 
 .ls-closed .bars:after {
-  content: '\E5C4';
+  /*content: '\E5C4';*/
+  content: '\E5D2';
   -moz-transform: scale(0);
   -ms-transform: scale(0);
   -o-transform: scale(0);
@@ -2321,6 +2322,9 @@
 /* Materialize Css | Taken from www.materializecss.com */
 /* Media ======================================= */
 @media (max-width: 767px) {
+  .navbar {
+    margin-bottom: 0 !important;
+  }
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: 35px;
@@ -2348,9 +2352,26 @@
     margin-bottom: 15px; }
   .panel-switch-btn {
     top: 12px;
-    right: 0 !important; } }
+    right: 0 !important; }
+
+  section.content {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  section.content .container-fluid {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right:0 !important;}
+  }
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {padding-top: 8px !important;}
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
+  
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: 20px; } }
@@ -2401,7 +2422,7 @@ a {
   animation: none !important; }
 
 section.content {
-  margin: 100px 15px 0 315px;
+  margin: 0 15px 0 315px;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -6678,8 +6699,8 @@ fieldset[disabled] .form-control {
 .ls-closed .sidebar {
   margin-left: -300px; }
 
-.ls-closed section.content {
-  margin-left: 15px; }
+/*.ls-closed section.content {
+  margin-left: 0px; }*/
 
 .ls-closed .bars:after, .ls-closed .bars:before {
   font-family: 'Material Icons';
@@ -6707,7 +6728,8 @@ fieldset[disabled] .form-control {
   transform: scale(1); }
 
 .ls-closed .bars:after {
-  content: '\E5C4';
+  /*content: '\E5C4';*/
+  content: '\E5D2';
   -moz-transform: scale(0);
   -ms-transform: scale(0);
   -o-transform: scale(0);
@@ -7562,6 +7584,7 @@ fieldset[disabled] .form-control {
         color: #fff; }
   .sidebar .menu {
     position: relative;
+    padding-top: 15px;
     overflow-y: auto;
     height: 90vh; }
     .sidebar .menu .list {
@@ -7664,7 +7687,7 @@ fieldset[disabled] .form-control {
           padding-left: 95px; }
 
 .right-sidebar {
-  width: 280px;
+  width: 180px;
   height: calc(100vh - 70px);
   position: fixed;
   right: -300px;
@@ -7684,7 +7707,7 @@ fieldset[disabled] .form-control {
     right: 0; }
   .right-sidebar .nav-tabs {
     font-weight: 600;
-    font-size: 13px;
+    font-size: 15px;
     width: 100%;
     margin-left: 2px; }
     .right-sidebar .nav-tabs li {
