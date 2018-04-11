@@ -1,7 +1,7 @@
 #= require jquery
 #= require rails-ujs
 #= require turbolinks
-#= require bootstrap/js/bootstrap.min
+#= require bootstrap.min
 #= require ckeditor/plugins/codesnippet/lib/highlight/highlight.pack
 #= require clipboard
 #= require bootstrap-select/js/bootstrap-select.min
