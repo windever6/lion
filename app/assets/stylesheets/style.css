@@ -2364,10 +2364,15 @@
     margin-left: 0 !important;
     padding-left: 0 !important;
     padding-right:0 !important;}
-  }
+
+  button.clipboard-btn img { display: none; }
+}
 
 @media (min-width: 768px) {
   .navbar-nav > li > a {padding-top: 8px !important;}
+  td:hover button.clipboard-btn img {
+    opacity: 0.8;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2472,17 +2477,17 @@ section.content {
     position: relative;
     left: -1px; }
 
-.btn-link {
+.btn-klink {
   font-weight: bold;
   color: #333;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s; }
-  .btn-link:active, .btn-link:focus {
+  .btn-klink:active, .btn-klink:focus {
     text-decoration: none;
     color: #333; }
-  .btn-link:hover {
+  .btn-klink:hover {
     text-decoration: none;
     color: #333;
     background-color: #ddd; }
@@ -2503,7 +2508,7 @@ section.content {
     left: 0px !important;
     top: 6px !important; }
 
-.btn:not(.btn-link):not(.btn-circle) {
+.btn:not(.btn-klink):not(.btn-circle) {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -2512,13 +2517,13 @@ section.content {
   border: none;
   font-size: 13px;
   outline: none; }
-  .btn:not(.btn-link):not(.btn-circle):hover {
+  .btn:not(.btn-klink):not(.btn-circle):hover {
     outline: none; }
-  .btn:not(.btn-link):not(.btn-circle) i {
+  .btn:not(.btn-klink):not(.btn-circle) i {
     font-size: 20px;
     position: relative;
     top: 3px; }
-  .btn:not(.btn-link):not(.btn-circle) span {
+  .btn:not(.btn-klink):not(.btn-circle) span {
     position: relative;
     top: -2px;
     margin-left: 3px; }
@@ -4282,9 +4287,9 @@ section.content {
     color: #fff !important; }
   .modal-col-red .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-red .modal-footer .btn-link {
+    .modal-col-red .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-red .modal-footer .btn-link:hover, .modal-col-red .modal-footer .btn-link:active, .modal-col-red .modal-footer .btn-link:focus {
+      .modal-col-red .modal-footer .btn-klink:hover, .modal-col-red .modal-footer .btn-klink:active, .modal-col-red .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-pink {
@@ -4294,9 +4299,9 @@ section.content {
     color: #fff !important; }
   .modal-col-pink .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-pink .modal-footer .btn-link {
+    .modal-col-pink .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-pink .modal-footer .btn-link:hover, .modal-col-pink .modal-footer .btn-link:active, .modal-col-pink .modal-footer .btn-link:focus {
+      .modal-col-pink .modal-footer .btn-klink:hover, .modal-col-pink .modal-footer .btn-klink:active, .modal-col-pink .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-purple {
@@ -4306,9 +4311,9 @@ section.content {
     color: #fff !important; }
   .modal-col-purple .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-purple .modal-footer .btn-link {
+    .modal-col-purple .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-purple .modal-footer .btn-link:hover, .modal-col-purple .modal-footer .btn-link:active, .modal-col-purple .modal-footer .btn-link:focus {
+      .modal-col-purple .modal-footer .btn-klink:hover, .modal-col-purple .modal-footer .btn-klink:active, .modal-col-purple .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-deep-purple {
@@ -4318,9 +4323,9 @@ section.content {
     color: #fff !important; }
   .modal-col-deep-purple .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-deep-purple .modal-footer .btn-link {
+    .modal-col-deep-purple .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-deep-purple .modal-footer .btn-link:hover, .modal-col-deep-purple .modal-footer .btn-link:active, .modal-col-deep-purple .modal-footer .btn-link:focus {
+      .modal-col-deep-purple .modal-footer .btn-klink:hover, .modal-col-deep-purple .modal-footer .btn-klink:active, .modal-col-deep-purple .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-indigo {
@@ -4330,9 +4335,9 @@ section.content {
     color: #fff !important; }
   .modal-col-indigo .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-indigo .modal-footer .btn-link {
+    .modal-col-indigo .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-indigo .modal-footer .btn-link:hover, .modal-col-indigo .modal-footer .btn-link:active, .modal-col-indigo .modal-footer .btn-link:focus {
+      .modal-col-indigo .modal-footer .btn-klink:hover, .modal-col-indigo .modal-footer .btn-klink:active, .modal-col-indigo .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-blue {
@@ -4342,9 +4347,9 @@ section.content {
     color: #fff !important; }
   .modal-col-blue .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-blue .modal-footer .btn-link {
+    .modal-col-blue .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-blue .modal-footer .btn-link:hover, .modal-col-blue .modal-footer .btn-link:active, .modal-col-blue .modal-footer .btn-link:focus {
+      .modal-col-blue .modal-footer .btn-klink:hover, .modal-col-blue .modal-footer .btn-klink:active, .modal-col-blue .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-light-blue {
@@ -4354,9 +4359,9 @@ section.content {
     color: #fff !important; }
   .modal-col-light-blue .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-light-blue .modal-footer .btn-link {
+    .modal-col-light-blue .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-light-blue .modal-footer .btn-link:hover, .modal-col-light-blue .modal-footer .btn-link:active, .modal-col-light-blue .modal-footer .btn-link:focus {
+      .modal-col-light-blue .modal-footer .btn-klink:hover, .modal-col-light-blue .modal-footer .btn-klink:active, .modal-col-light-blue .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-cyan {
@@ -4366,9 +4371,9 @@ section.content {
     color: #fff !important; }
   .modal-col-cyan .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-cyan .modal-footer .btn-link {
+    .modal-col-cyan .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-cyan .modal-footer .btn-link:hover, .modal-col-cyan .modal-footer .btn-link:active, .modal-col-cyan .modal-footer .btn-link:focus {
+      .modal-col-cyan .modal-footer .btn-klink:hover, .modal-col-cyan .modal-footer .btn-klink:active, .modal-col-cyan .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-teal {
@@ -4378,9 +4383,9 @@ section.content {
     color: #fff !important; }
   .modal-col-teal .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-teal .modal-footer .btn-link {
+    .modal-col-teal .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-teal .modal-footer .btn-link:hover, .modal-col-teal .modal-footer .btn-link:active, .modal-col-teal .modal-footer .btn-link:focus {
+      .modal-col-teal .modal-footer .btn-klink:hover, .modal-col-teal .modal-footer .btn-klink:active, .modal-col-teal .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-green {
@@ -4390,9 +4395,9 @@ section.content {
     color: #fff !important; }
   .modal-col-green .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-green .modal-footer .btn-link {
+    .modal-col-green .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-green .modal-footer .btn-link:hover, .modal-col-green .modal-footer .btn-link:active, .modal-col-green .modal-footer .btn-link:focus {
+      .modal-col-green .modal-footer .btn-klink:hover, .modal-col-green .modal-footer .btn-klink:active, .modal-col-green .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-light-green {
@@ -4402,9 +4407,9 @@ section.content {
     color: #fff !important; }
   .modal-col-light-green .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-light-green .modal-footer .btn-link {
+    .modal-col-light-green .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-light-green .modal-footer .btn-link:hover, .modal-col-light-green .modal-footer .btn-link:active, .modal-col-light-green .modal-footer .btn-link:focus {
+      .modal-col-light-green .modal-footer .btn-klink:hover, .modal-col-light-green .modal-footer .btn-klink:active, .modal-col-light-green .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-lime {
@@ -4414,9 +4419,9 @@ section.content {
     color: #fff !important; }
   .modal-col-lime .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-lime .modal-footer .btn-link {
+    .modal-col-lime .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-lime .modal-footer .btn-link:hover, .modal-col-lime .modal-footer .btn-link:active, .modal-col-lime .modal-footer .btn-link:focus {
+      .modal-col-lime .modal-footer .btn-klink:hover, .modal-col-lime .modal-footer .btn-klink:active, .modal-col-lime .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-yellow {
@@ -4426,9 +4431,9 @@ section.content {
     color: #fff !important; }
   .modal-col-yellow .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-yellow .modal-footer .btn-link {
+    .modal-col-yellow .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-yellow .modal-footer .btn-link:hover, .modal-col-yellow .modal-footer .btn-link:active, .modal-col-yellow .modal-footer .btn-link:focus {
+      .modal-col-yellow .modal-footer .btn-klink:hover, .modal-col-yellow .modal-footer .btn-klink:active, .modal-col-yellow .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-amber {
@@ -4438,9 +4443,9 @@ section.content {
     color: #fff !important; }
   .modal-col-amber .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-amber .modal-footer .btn-link {
+    .modal-col-amber .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-amber .modal-footer .btn-link:hover, .modal-col-amber .modal-footer .btn-link:active, .modal-col-amber .modal-footer .btn-link:focus {
+      .modal-col-amber .modal-footer .btn-klink:hover, .modal-col-amber .modal-footer .btn-klink:active, .modal-col-amber .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-orange {
@@ -4450,9 +4455,9 @@ section.content {
     color: #fff !important; }
   .modal-col-orange .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-orange .modal-footer .btn-link {
+    .modal-col-orange .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-orange .modal-footer .btn-link:hover, .modal-col-orange .modal-footer .btn-link:active, .modal-col-orange .modal-footer .btn-link:focus {
+      .modal-col-orange .modal-footer .btn-klink:hover, .modal-col-orange .modal-footer .btn-klink:active, .modal-col-orange .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-deep-orange {
@@ -4462,9 +4467,9 @@ section.content {
     color: #fff !important; }
   .modal-col-deep-orange .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-deep-orange .modal-footer .btn-link {
+    .modal-col-deep-orange .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-deep-orange .modal-footer .btn-link:hover, .modal-col-deep-orange .modal-footer .btn-link:active, .modal-col-deep-orange .modal-footer .btn-link:focus {
+      .modal-col-deep-orange .modal-footer .btn-klink:hover, .modal-col-deep-orange .modal-footer .btn-klink:active, .modal-col-deep-orange .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-brown {
@@ -4474,9 +4479,9 @@ section.content {
     color: #fff !important; }
   .modal-col-brown .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-brown .modal-footer .btn-link {
+    .modal-col-brown .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-brown .modal-footer .btn-link:hover, .modal-col-brown .modal-footer .btn-link:active, .modal-col-brown .modal-footer .btn-link:focus {
+      .modal-col-brown .modal-footer .btn-klink:hover, .modal-col-brown .modal-footer .btn-klink:active, .modal-col-brown .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-grey {
@@ -4486,9 +4491,9 @@ section.content {
     color: #fff !important; }
   .modal-col-grey .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-grey .modal-footer .btn-link {
+    .modal-col-grey .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-grey .modal-footer .btn-link:hover, .modal-col-grey .modal-footer .btn-link:active, .modal-col-grey .modal-footer .btn-link:focus {
+      .modal-col-grey .modal-footer .btn-klink:hover, .modal-col-grey .modal-footer .btn-klink:active, .modal-col-grey .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-blue-grey {
@@ -4498,9 +4503,9 @@ section.content {
     color: #fff !important; }
   .modal-col-blue-grey .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-blue-grey .modal-footer .btn-link {
+    .modal-col-blue-grey .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-blue-grey .modal-footer .btn-link:hover, .modal-col-blue-grey .modal-footer .btn-link:active, .modal-col-blue-grey .modal-footer .btn-link:focus {
+      .modal-col-blue-grey .modal-footer .btn-klink:hover, .modal-col-blue-grey .modal-footer .btn-klink:active, .modal-col-blue-grey .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-black {
@@ -4510,9 +4515,9 @@ section.content {
     color: #fff !important; }
   .modal-col-black .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-black .modal-footer .btn-link {
+    .modal-col-black .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-black .modal-footer .btn-link:hover, .modal-col-black .modal-footer .btn-link:active, .modal-col-black .modal-footer .btn-link:focus {
+      .modal-col-black .modal-footer .btn-klink:hover, .modal-col-black .modal-footer .btn-klink:active, .modal-col-black .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 .modal-col-white {
@@ -4522,9 +4527,9 @@ section.content {
     color: #fff !important; }
   .modal-col-white .modal-footer {
     background-color: rgba(0, 0, 0, 0.12); }
-    .modal-col-white .modal-footer .btn-link {
+    .modal-col-white .modal-footer .btn-klink {
       color: #fff !important; }
-      .modal-col-white .modal-footer .btn-link:hover, .modal-col-white .modal-footer .btn-link:active, .modal-col-white .modal-footer .btn-link:focus {
+      .modal-col-white .modal-footer .btn-klink:hover, .modal-col-white .modal-footer .btn-klink:active, .modal-col-white .modal-footer .btn-klink:focus {
         background-color: rgba(0, 0, 0, 0.12); }
 
 /* Labels ====================================== */
@@ -5152,6 +5157,12 @@ section.content {
 .form-control[readonly],
 fieldset[disabled] .form-control {
   background-color: transparent; }
+
+.form-group .form-control:focus {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -ms-box-shadow: none !important;
+  box-shadow: none !important; }
 
 /* Color Picker ================================ */
 .colorpicker {
@@ -8074,7 +8085,4 @@ button.clipboard-btn {
 }
 button.clipboard-btn img {
   opacity: 0;
-}
-td:hover button.clipboard-btn img {
-  opacity: 0.8;
 }
