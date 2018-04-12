@@ -21,3 +21,4 @@ config/config.yml
 config/database.yml
 .rbenv-vars
 /public/assets
+.rvmrc

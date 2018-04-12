@@ -89,6 +89,7 @@
   menu:
     home: "主页"
     cmd: 指令集
+    link: 链接集
     topics: "社区"
     wiki: "Wiki"
     gems: "Gems"

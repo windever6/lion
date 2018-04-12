@@ -2202,7 +2202,7 @@
     color: #555 !important; }
 
 .demo-tagsinput-area {
-  margin-bottom: 50px !important; }
+  margin-bottom: 25px !important; }
 
 .demo-icon-container .demo-google-material-icon {
   margin-bottom: 5px;
@@ -5067,9 +5067,7 @@ section.content {
 .form-horizontal .form-group {
   margin-bottom: 0; }
 
-.form-group {
-  width: 100%;
-  margin-bottom: 25px; }
+.form-group { width: 100%; }
   .form-group .form-control {
     width: 100%;
     border: none;
@@ -5146,6 +5144,8 @@ section.content {
   bottom: 20px;
   font-size: 10px; }
 
+
+.form-group-lg { margin-bottom: 25px !important; }
 .form-group-lg .form-label {
   font-size: 18px; }
 

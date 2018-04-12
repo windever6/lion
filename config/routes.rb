@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :links do
+    member do
+      get 'confirm'
+    end
+  end
   resources :commands do
     member do
       get 'confirm'

@@ -1,0 +1,8 @@
+$("#defaultModal").modal("hide")
+<% if @link.errors.empty? %>
+  notify('指令更新成功');
+  datatableUpdate(removeTags('<%= j render('show') %>'), $("[data-href='<%= @data_href %>']").parent().parent())
+<% else %>
+  var text = '指令更新失败: ' + '<%= @link.first_error_message %>'
+  notify(text);
+<% end %>
