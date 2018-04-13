@@ -18,7 +18,6 @@ gem 'doorkeeper'
 gem "rucaptcha" # 验证码
 gem 'material_icons'
 gem 'therubyracer'
-gem "font-awesome-rails"
 gem 'clipboard-rails'
 
 # 三方平台 OAuth 验证登陆

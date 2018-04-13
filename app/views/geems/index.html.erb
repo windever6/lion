@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="card">
+        <div class="header">
+          <h2>
+            <%= t("menu.geem") %>
+            <button type="button" class="btn btn-primary waves-effect pull-right" data-toggle="modal" data-target="#defaultModal" data-text='新增gem' data-href=<%= new_geem_path %> data-method='GET' >新增gem</button>
+          </h2>
+        </div>
+        <div class="body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover js-table dataTable">
+              <thead>
+                <tr>
+                    <th>gem名称</th>
+                    <th>gem用途</th>
+                    <th>gem标签</th>
+                    <th>编辑</th>
+                    <th>删除</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                    <th>gem名称</th>
+                    <th>gem用途</th>
+                    <th>gem标签</th>
+                    <th>编辑</th>
+                    <th>删除</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <% @geems.each do |geem| %>
+                  <tr>
+                    <td><%= link_to geem.name, geem.url %><button class="clipboard-btn" type="button" data-clipboard-text="<%= geem.url %>"><%= image_tag("clippy.svg", size: '16x18', alt: "copy") %></button></td>
+                  <td><%= geem.use_for %></td>
+                  <td><%= geem.labels %></td>
+                  <td><button type="button" class="no_style_btn" data-toggle="modal" data-target="#defaultModal" data-text='编辑指令' data-href=<%= edit_geem_path(geem) %> data-method='GET' ><%= material_icon.mode_edit %></button></td>
+                  <td><button type="button" class="no_style_btn" data-toggle="modal" data-target="#defaultModal" data-text='指令删除后无法恢复，确定删除吗？' data-href=<%= confirm_geem_path(geem) %> data-method='GET' ><%= material_icon.delete %></button></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

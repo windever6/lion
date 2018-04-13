@@ -1,0 +1,9 @@
+<%= simple_form_for(@geem, remote: true, html: {id: "form_validation"}) do |f| %>
+  <%= f.input :name, label: 'gem名称', disabled: true, wrapper: :form_float_required %>
+  <%= f.input :use_for, label: 'gem用途', disabled: true, wrapper: :form_float_required %>
+  <%= f.input :url, label: 'gem——url', disabled: true, wrapper: :form_float_required %>
+  <label for="geem_labels">gem标签</label>
+  <%= f.input :labels, disabled: true, wrapper: :vertical_tag %>
+<% end %>
+<button type="button" class="btn btn-block btn-lg waves-effect" data-dismiss="modal">不，点错了</button>
+<%= link_to '确定，删除', geem_path(@geem), method: 'DELETE', remote: true, class: "btn btn-block btn-lg btn-warning waves-effect" %>

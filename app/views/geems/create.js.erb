@@ -1,0 +1,8 @@
+$("#defaultModal").modal("hide");
+<% if @geem.errors.empty? %>
+  notify('gem创建成功');
+  datatableCreate(removeTags('<%= j render('show') %>'))
+<% else %>
+  var text = 'gem创建失败: ' + '<%= @geem.first_error_message %>'
+  notify(text);
+<% end %>

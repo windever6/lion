@@ -1,0 +1,8 @@
+$("#defaultModal").modal("hide")
+<% if @geem.errors.empty? %>
+  notify('gem更新成功');
+  datatableUpdate(removeTags('<%= j render('show') %>'), $("[data-href='<%= @data_href %>']").parent().parent())
+<% else %>
+  var text = 'gem更新失败: ' + '<%= @geem.first_error_message %>'
+  notify(text);
+<% end %>

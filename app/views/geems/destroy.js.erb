@@ -1,0 +1,3 @@
+notify('gem删除成功');
+$("#defaultModal").modal("hide");
+$('.js-table').DataTable().row($("[data-href='<%= @data_href %>']").parent().parent()).remove().draw();

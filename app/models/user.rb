@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   has_many :commands
   has_many :links
+  has_many :geems
 
   class << self
   end
