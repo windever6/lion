@@ -13,7 +13,6 @@
             <table class="table table-bordered table-striped table-hover js-table dataTable">
               <thead>
                 <tr>
-                    <th>链接内容</th>
                     <th>链接用途</th>
                     <th>链接标签</th>
                     <th>编辑</th>
@@ -22,7 +21,6 @@
               </thead>
               <tfoot>
                 <tr>
-                    <th>链接内容</th>
                     <th>链接用途</th>
                     <th>链接标签</th>
                     <th>编辑</th>
@@ -32,11 +30,10 @@
               <tbody>
                 <% @links.each do |link| %>
                   <tr>
-                    <td><%= link.content %><button class="clipboard-btn" type="button" data-clipboard-text="<%= link.content %>"><%= image_tag("clippy.svg", size: '16x18', alt: "copy") %></button></td>
-                    <td><%= link.use_for %></td>
+                    <td><%= link_to link.use_for, link.content, target: "_blank"%><button class="clipboard-btn" type="button" data-clipboard-text="<%= link.content %>"><%= image_tag("clippy.svg", size: '16x18', alt: "copy") %></button></td>
                     <td><%= link.labels %></td>
-                    <td><button type="button" class="no_style_btn" data-toggle="modal" data-target="#defaultModal" data-text='编辑链接' data-href=<%= edit_link_path(link) %> data-method='GET' ><%= material_icon.mode_edit %></button></td>
-                    <td><button type="button" class="no_style_btn" data-toggle="modal" data-target="#defaultModal" data-text='链接删除后无法恢复，确定删除吗？' data-href=<%= confirm_link_path(link) %> data-method='GET' ><%= material_icon.delete %></button></td>
+                    <td><button type="button" class="no_style_btn" data-toggle="modal" data-target="#defaultModal" data-text='编辑指令' data-href=<%= edit_link_path(link) %> data-method='GET' ><%= material_icon.mode_edit %></button></td>
+                    <td><button type="button" class="no_style_btn" data-toggle="modal" data-target="#defaultModal" data-text='指令删除后无法恢复，确定删除吗？' data-href=<%= confirm_link_path(link) %> data-method='GET' ><%= material_icon.delete %></button></td>
                   </tr>
                 <% end %>
               </tbody>

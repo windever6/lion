@@ -32,7 +32,7 @@
               <tbody>
                 <% @geems.each do |geem| %>
                   <tr>
-                    <td><%= link_to geem.name, geem.url %><button class="clipboard-btn" type="button" data-clipboard-text="<%= geem.url %>"><%= image_tag("clippy.svg", size: '16x18', alt: "copy") %></button></td>
+                    <td><%= link_to geem.name, geem.url,target: "_blank"%><button class="clipboard-btn" type="button" data-clipboard-text="<%= geem.url %>"><%= image_tag("clippy.svg", size: '16x18', alt: "copy") %></button></td>
                   <td><%= geem.use_for %></td>
                   <td><%= geem.labels %></td>
                   <td><button type="button" class="no_style_btn" data-toggle="modal" data-target="#defaultModal" data-text='编辑指令' data-href=<%= edit_geem_path(geem) %> data-method='GET' ><%= material_icon.mode_edit %></button></td>
