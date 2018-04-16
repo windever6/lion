@@ -5894,6 +5894,7 @@ fieldset[disabled] .form-control {
 .pagination li.active a {
   background-color: #2196F3; }
 
+
 .pagination li {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -5908,6 +5909,9 @@ fieldset[disabled] .form-control {
   border: none;
   font-weight: bold;
   color: #555; }
+
+.pagination > li > a,
+.pagination > li > span { padding: 5px 12px !important; }
 
 .pagination > li:first-child > a,
 .pagination > li:last-child > a {
