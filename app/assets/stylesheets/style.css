@@ -10,7 +10,7 @@
   -ms-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   border: none;
-  position: fixed;
+  position: fixed !important; /* 用important 覆盖掉bootstrap里面的relative*/
   top: 0;
   left: 0;
   z-index: 12;
@@ -2355,7 +2355,7 @@
     right: 0 !important; }
 
   section.content {
-    margin-top: 0 !important;
+    margin-top: 70px !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
@@ -2427,7 +2427,7 @@ a {
   animation: none !important; }
 
 section.content {
-  margin: 0 15px 0 315px;
+  margin: 95px 15px 0 315px;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
   -webkit-transition: 0.5s;

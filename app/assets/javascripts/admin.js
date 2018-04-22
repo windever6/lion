@@ -441,6 +441,12 @@ $.AdminBSB.browser = {
 /* dataTable */
 $.AdminBSB.dataTable = {
     activate: function () {
+        var dt_wrapper = $('div.dataTables_wrapper');
+        if (dt_wrapper.attr('class') != undefined) {
+            var dat = $('table.dataTable');
+            dat.removeClass('dataTable');
+            return;
+        }
         var pageLength = $.AdminBSB.current.dtPageLength();
         pageLength = pageLength === '' ? 10 : parseInt(pageLength);
         var dt = $('.js-table').DataTable({
