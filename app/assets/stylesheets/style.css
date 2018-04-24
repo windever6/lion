@@ -2322,6 +2322,9 @@
 /* Materialize Css | Taken from www.materializecss.com */
 /* Media ======================================= */
 @media (max-width: 767px) {
+  .sidebar {
+    width: 40% !important;
+  }
   .navbar {
     margin-bottom: 0 !important;
   }
@@ -2427,7 +2430,7 @@ a {
   animation: none !important; }
 
 section.content {
-  margin: 95px 15px 0 315px;
+  margin: 95px 15px 0 255px;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -7511,7 +7514,7 @@ fieldset[disabled] .form-control {
   transition: all 0.5s;
   font-family: "Roboto", sans-serif;
   background: #fdfdfd;
-  width: 300px;
+  width: 240px;
   overflow: hidden;
   display: inline-block;
   height: calc(100vh - 70px);
