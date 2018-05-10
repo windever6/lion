@@ -450,7 +450,7 @@ $.AdminBSB.dataTable = {
         var pageLength = $.AdminBSB.current.dtPageLength();
         pageLength = pageLength === '' ? 10 : parseInt(pageLength);
         var dt = $('.js-table').DataTable({
-            lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "全部"]],
+            lengthMenu: [[-1, 10, 25, 50, 100], ["全部", 10, 25, 50, 100]],
             pageLength: pageLength,
             responsive: true
         });
